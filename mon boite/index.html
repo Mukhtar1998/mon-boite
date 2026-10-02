@@ -1,0 +1,1909 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Maison Impeccable - Nettoyage professionnel à Colmar et alentours." />
+		<title>Maison Impeccable | Nettoyage Professionnel</title>
+		<style>
+			:root {
+				--bg: #f6f8fb;
+				--bg-soft: #eef3f9;
+				--card: #ffffff;
+				--card-alt: #f2f6fb;
+				--navy: #132b3e;
+				--navy-soft: #1c3e5a;
+				--text: #1b2b39;
+				--muted: #607184;
+				--line: #dfe9f3;
+				--primary: #2f7ae0;
+				--primary-soft: #eaf4ff;
+				--green: #2fa66a;
+				--green-soft: #eafaf1;
+				--shadow: 0 20px 45px rgba(18, 38, 54, 0.08);
+				--radius: 22px;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+			html {
+				scroll-behavior: auto;
+			}
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.6;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+			img {
+				max-width: 100%;
+				display: block;
+			}
+			button,
+			input,
+			select,
+			textarea {
+				font: inherit;
+			}
+
+			.container {
+				width: min(1180px, 92%);
+				margin: 0 auto;
+			}
+
+			.section {
+				padding: 82px 0;
+			}
+
+			.section-head {
+				text-align: center;
+				max-width: 700px;
+				margin: 0 auto 40px;
+			}
+
+			.eyebrow {
+				display: inline-block;
+				margin-bottom: 12px;
+				padding: 8px 12px;
+				border-radius: 999px;
+				background: var(--primary-soft);
+				color: var(--primary);
+				font-size: 0.72rem;
+				font-weight: 800;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+
+			h1,
+			h2,
+			h3 {
+				letter-spacing: -0.04em;
+				line-height: 1.1;
+			}
+
+			.nav-wrap {
+				position: sticky;
+				top: 0;
+				z-index: 30;
+				background: rgba(255, 255, 255, 0.92);
+				border-bottom: 1px solid var(--line);
+				backdrop-filter: blur(8px);
+			}
+
+			.nav {
+				height: 78px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 24px;
+			}
+
+			.logo {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				font-weight: 800;
+				font-size: 1.08rem;
+				color: var(--navy);
+			}
+
+			.logo-mark {
+				width: 42px;
+				height: 42px;
+				border-radius: 12px;
+				display: grid;
+				place-items: center;
+				background: linear-gradient(135deg, var(--primary), #78befd);
+				color: white;
+				font-size: 0.8rem;
+				font-weight: 900;
+				box-shadow: 0 12px 24px rgba(47, 122, 224, 0.22);
+			}
+
+			nav {
+				display: flex;
+				align-items: center;
+				gap: 28px;
+				font-size: 0.9rem;
+				font-weight: 700;
+				color: var(--navy-soft);
+			}
+
+			nav a {
+				transition: color 0.2s ease;
+			}
+
+			nav a:hover {
+				color: var(--primary);
+			}
+
+			.nav-btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 12px 18px;
+				border-radius: 10px;
+				background: var(--navy);
+				color: white;
+				font-weight: 800;
+				transition:
+					transform 0.2s ease,
+					box-shadow 0.2s ease;
+			}
+
+			.nav-btn:hover {
+				transform: translateY(-1px);
+				box-shadow: 0 14px 24px rgba(19, 43, 62, 0.12);
+			}
+
+			.mobile-toggle {
+				display: none;
+				width: 44px;
+				height: 44px;
+				border: 1px solid var(--line);
+				border-radius: 12px;
+				background: white;
+				color: var(--navy);
+				font-size: 1.4rem;
+				cursor: pointer;
+			}
+
+			.hero {
+				background: linear-gradient(180deg, #eef5ff 0%, #f8fbff 100%);
+				padding: 78px 0 72px;
+				border-bottom: 1px solid var(--line);
+			}
+
+			.hero-grid {
+				display: grid;
+				grid-template-columns: 1.15fr 0.85fr;
+				gap: 42px;
+				align-items: center;
+			}
+
+			.hero-copy h1 {
+				font-size: clamp(2.8rem, 6vw, 5rem);
+				color: var(--navy);
+				line-height: 0.95;
+				margin-bottom: 18px;
+			}
+
+			.hero-copy h1 span {
+				color: var(--primary);
+			}
+
+			.hero-copy p {
+				max-width: 620px;
+				font-size: 1.08rem;
+				color: var(--muted);
+				margin-bottom: 28px;
+			}
+
+			.actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 14px;
+				margin-bottom: 26px;
+			}
+
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 15px 22px;
+				border-radius: 12px;
+				font-weight: 800;
+				cursor: pointer;
+				border: 1px solid transparent;
+				transition:
+					transform 0.2s ease,
+					box-shadow 0.2s ease;
+			}
+
+			.btn:hover {
+				transform: translateY(-1px);
+			}
+
+			.btn.primary {
+				background: var(--navy);
+				color: white;
+				box-shadow: 0 12px 24px rgba(19, 43, 62, 0.12);
+			}
+
+			.btn.secondary {
+				background: white;
+				color: var(--navy);
+				border-color: var(--line);
+			}
+
+			.trust-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+			}
+
+			.trust-pill {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 10px 12px;
+				border-radius: 999px;
+				background: white;
+				border: 1px solid var(--line);
+				color: var(--navy-soft);
+				font-size: 0.8rem;
+				font-weight: 700;
+			}
+
+			.trust-pill::before {
+				content: "✓";
+				width: 18px;
+				height: 18px;
+				display: grid;
+				place-items: center;
+				border-radius: 50%;
+				background: var(--green-soft);
+				color: var(--green);
+				font-size: 0.7rem;
+				font-weight: 900;
+			}
+
+			.hero-card {
+				background: white;
+				border: 1px solid var(--line);
+				border-radius: 28px;
+				box-shadow: var(--shadow);
+				padding: 22px;
+			}
+
+			.hero-visual {
+				height: 325px;
+				border-radius: 22px;
+				background: linear-gradient(135deg, #e9f4ff 0%, #dcecff 100%);
+				border: 1px solid rgba(47, 122, 224, 0.14);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.hero-visual::before,
+			.hero-visual::after {
+				content: "";
+				position: absolute;
+				border-radius: 50%;
+				background: rgba(255, 255, 255, 0.52);
+			}
+
+			.hero-visual::before {
+				width: 200px;
+				height: 200px;
+				right: -32px;
+				top: -24px;
+			}
+
+			.hero-visual::after {
+				width: 150px;
+				height: 150px;
+				left: -18px;
+				bottom: -14px;
+			}
+
+			.sparkle {
+				font-size: 5rem;
+				position: relative;
+				z-index: 1;
+			}
+
+			.hero-card h3 {
+				color: var(--navy);
+				font-size: 1.7rem;
+				margin-top: 20px;
+				margin-bottom: 8px;
+			}
+
+			.hero-card p {
+				color: var(--muted);
+			}
+
+			.stats {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 18px;
+			}
+
+			.stat {
+				background: white;
+				border: 1px solid var(--line);
+				border-radius: 18px;
+				padding: 18px 14px;
+				text-align: center;
+				box-shadow: var(--shadow);
+			}
+
+			.stat strong {
+				display: block;
+				font-size: clamp(1.5rem, 3vw, 2.2rem);
+				color: var(--navy);
+				letter-spacing: -0.05em;
+				margin-bottom: 5px;
+			}
+
+			.stat span {
+				color: var(--muted);
+				font-size: 0.72rem;
+				font-weight: 800;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+
+			.services-grid,
+			.process-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 22px;
+			}
+
+			.testimonials-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 22px;
+			}
+
+			.testimonial-card {
+				background: white;
+				border: 1px solid var(--line);
+				border-radius: var(--radius);
+				box-shadow: var(--shadow);
+				padding: 26px 22px;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+
+			.testimonial-card .stars {
+				color: #ffc107;
+				font-size: 1.1rem;
+				letter-spacing: 2px;
+			}
+
+			.testimonial-card .review {
+				color: var(--muted);
+				font-size: 0.98rem;
+				line-height: 1.6;
+				flex-grow: 1;
+			}
+
+			.testimonial-author {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				padding-top: 12px;
+				border-top: 1px solid var(--line);
+			}
+
+			.testimonial-author strong {
+				color: var(--navy);
+				font-size: 0.95rem;
+			}
+
+			.testimonial-author span {
+				color: var(--muted);
+				font-size: 0.8rem;
+			}
+
+			.card,
+			.step {
+				background: white;
+				border: 1px solid var(--line);
+				border-radius: var(--radius);
+				box-shadow: var(--shadow);
+				padding: 26px 22px;
+			}
+
+			.card-icon {
+				width: 60px;
+				height: 60px;
+				border-radius: 18px;
+				display: grid;
+				place-items: center;
+				background: var(--primary-soft);
+				font-size: 1.9rem;
+				margin-bottom: 16px;
+			}
+
+			.card h3,
+			.step h3 {
+				font-size: 1.28rem;
+				color: var(--navy);
+				margin-bottom: 8px;
+			}
+
+			.card p,
+			.step p,
+			.about-copy p,
+			.about-panel p {
+				color: var(--muted);
+				font-size: 0.98rem;
+			}
+
+			.about-wrap {
+				background: linear-gradient(180deg, #f8fbff 0%, #f3f7fc 100%);
+				border-top: 1px solid var(--line);
+				border-bottom: 1px solid var(--line);
+			}
+
+			.about-grid {
+				display: grid;
+				grid-template-columns: 1.08fr 0.92fr;
+				gap: 42px;
+				align-items: center;
+			}
+
+			.about-copy h2 {
+				font-size: clamp(2rem, 4vw, 3rem);
+				color: var(--navy);
+				line-height: 1.1;
+				margin-bottom: 14px;
+			}
+
+			.about-copy p {
+				margin-bottom: 16px;
+			}
+
+			.check-list {
+				display: grid;
+				gap: 12px;
+				margin-top: 22px;
+			}
+
+			.check-item {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				background: white;
+				border: 1px solid var(--line);
+				border-radius: 12px;
+				padding: 12px 14px;
+				color: var(--navy-soft);
+				font-weight: 700;
+			}
+
+			.check-item::before {
+				content: "✓";
+				display: grid;
+				place-items: center;
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background: var(--green-soft);
+				color: var(--green);
+				font-weight: 900;
+			}
+
+			.about-panel {
+				background: white;
+				border: 1px solid var(--line);
+				border-radius: 24px;
+				box-shadow: var(--shadow);
+				padding: 30px;
+			}
+
+			.about-panel h3 {
+				font-size: 1.8rem;
+				color: var(--navy);
+				margin-bottom: 10px;
+			}
+
+			.mini-metrics {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 14px;
+				margin-top: 18px;
+			}
+
+			.mini-metrics .metric {
+				background: var(--bg-soft);
+				border: 1px solid var(--line);
+				border-radius: 16px;
+				padding: 16px 12px;
+				text-align: center;
+			}
+
+			.mini-metrics strong {
+				display: block;
+				font-size: 1.4rem;
+				color: var(--navy);
+				letter-spacing: -0.05em;
+			}
+
+			.mini-metrics span {
+				display: block;
+				margin-top: 2px;
+				color: var(--muted);
+				font-size: 0.7rem;
+				font-weight: 800;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+
+			.step .number {
+				display: inline-flex;
+				width: 38px;
+				height: 38px;
+				align-items: center;
+				justify-content: center;
+				border-radius: 10px;
+				background: var(--primary-soft);
+				color: var(--primary);
+				font-weight: 900;
+				margin-bottom: 14px;
+			}
+
+			.booking-wrap {
+				background: linear-gradient(180deg, #0f223b 0%, #10273d 100%);
+				border: 1px solid rgba(255, 255, 255, 0.06);
+				border-radius: 30px;
+				overflow: hidden;
+				box-shadow: 0 28px 60px rgba(16, 39, 61, 0.18);
+			}
+
+			.booking-grid {
+				display: grid;
+				grid-template-columns: 0.9fr 1.1fr;
+			}
+
+			.booking-info {
+				padding: 34px 28px;
+				background: rgba(255, 255, 255, 0.02);
+				border-right: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			.booking-info .eyebrow {
+				display: inline-block;
+				margin-bottom: 14px;
+				padding: 8px 12px;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.04);
+				color: #dfeeff;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				font-size: 0.68rem;
+				font-weight: 800;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+
+			.booking-info h3 {
+				color: white;
+				font-size: 2rem;
+				margin-bottom: 10px;
+			}
+
+			.booking-info p {
+				color: rgba(255, 255, 255, 0.82);
+				margin-bottom: 18px;
+			}
+
+			.contact-list {
+				display: grid;
+				gap: 10px;
+				margin-top: 18px;
+			}
+
+			.contact-line {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+				padding: 10px 0;
+				color: white;
+				font-size: 0.98rem;
+			}
+
+			.contact-line .icon {
+				width: 32px;
+				height: 32px;
+				display: grid;
+				place-items: center;
+				border-radius: 10px;
+				background: rgba(119, 183, 255, 0.12);
+				color: #bfecff;
+				border: 1px solid rgba(119, 183, 255, 0.18);
+			}
+
+			.contact-line a {
+				color: #a8e0ff;
+				font-weight: 700;
+			}
+
+			.booking-points {
+				list-style: none;
+				display: grid;
+				gap: 12px;
+				margin-top: 24px;
+			}
+
+			.booking-points li {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				background: rgba(255, 255, 255, 0.03);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 12px;
+				padding: 12px 14px;
+				color: white;
+				font-weight: 700;
+			}
+
+			.booking-points li::before {
+				content: "✓";
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				display: grid;
+				place-items: center;
+				background: rgba(47, 166, 106, 0.12);
+				color: #7fe2a0;
+				font-weight: 900;
+			}
+
+			.booking-form {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 18px;
+				padding: 30px 28px;
+				background: rgba(8, 17, 24, 0.14);
+			}
+
+			.booking-form .full {
+				grid-column: 1 / -1;
+			}
+
+			.booking-form div {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.booking-form label {
+				color: #edf6ff;
+				font-size: 0.9rem;
+				font-weight: 700;
+			}
+
+			.booking-form input,
+			.booking-form select,
+			.booking-form textarea {
+				width: 100%;
+				padding: 14px 16px;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 12px;
+				background: rgba(255, 255, 255, 0.04);
+				color: white;
+				outline: none;
+			}
+
+			.booking-form select {
+				background-color: #eef3f9;
+				color: var(--navy);
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23132b3e' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-position: right 12px center;
+				background-size: 12px;
+				padding-right: 36px;
+				appearance: none;
+			}
+
+			.booking-form select option {
+				background: white;
+				color: var(--navy);
+			}
+
+			.booking-form input::placeholder,
+			.booking-form textarea::placeholder {
+				color: rgba(224, 234, 246, 0.72);
+			}
+
+			.booking-form input:focus,
+			.booking-form select:focus,
+			.booking-form textarea:focus {
+				border-color: rgba(155, 209, 255, 0.9);
+				box-shadow: 0 0 0 3px rgba(119, 183, 255, 0.12);
+			}
+
+			.booking-form textarea {
+				min-height: 130px;
+				resize: vertical;
+			}
+
+			.booking-form .btn {
+				width: 100%;
+				background: white;
+				color: var(--navy);
+				border: none;
+				padding: 16px 20px;
+				border-radius: 12px;
+				font-weight: 900;
+			}
+
+			footer {
+				background: #0a1727;
+				color: rgba(255, 255, 255, 0.8);
+				padding: 30px 0;
+			}
+
+			.footer-inner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 20px;
+				flex-wrap: wrap;
+			}
+
+			.footer-brand {
+				display: inline-flex;
+				align-items: center;
+				gap: 12px;
+				color: white;
+				font-weight: 800;
+			}
+
+			.footer-nav {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 18px;
+				color: rgba(255, 255, 255, 0.82);
+				font-size: 0.92rem;
+			}
+
+			@media (max-width: 900px) {
+				nav {
+					position: absolute;
+					top: 78px;
+					left: 0;
+					right: 0;
+					padding: 18px 5%;
+					background: white;
+					border-bottom: 1px solid var(--line);
+					display: none;
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				nav.open {
+					display: flex;
+				}
+
+				.mobile-toggle {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.nav-btn {
+					display: none;
+				}
+
+				.hero-grid,
+				.about-grid,
+				.booking-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.services-grid,
+				.process-grid,
+				.testimonials-grid,
+				.stats {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+
+			@media (max-width: 640px) {
+				.section {
+					padding: 72px 0;
+				}
+
+				.services-grid,
+				.process-grid,
+				.testimonials-grid,
+				.stats,
+				.booking-form {
+					grid-template-columns: 1fr;
+				}
+
+				.hero-copy h1 {
+					font-size: 2.2rem;
+				}
+
+				.booking-info,
+				.booking-form {
+					padding: 22px 18px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="nav-wrap">
+			<div class="container nav">
+				<a href="#accueil" class="logo" aria-label="Maison Impeccable">
+					<span class="logo-mark">MI</span>
+					<span>Maison Impeccable</span>
+				</a>
+
+				<nav id="mainNav">
+					<a href="#services">Services</a>
+					<a href="#apropos">À propos</a>
+					<a href="#process">Process</a>
+					<a href="#contact">Contact</a>
+				</nav>
+
+				<a href="#contact" class="nav-btn">Demander un devis</a>
+				<button class="mobile-toggle" type="button" aria-label="Menu">
+					☰
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" id="accueil">
+				<div class="container hero-grid">
+					<div class="hero-copy">
+						<span class="eyebrow">Nettoyage professionnel</span>
+						<h1>Votre interieur,<br /><span>immaculate.</span></h1>
+						<p>
+							Maison Impeccable propose des prestations de nettoyage fiables et
+							soignées pour les particuliers, les professionnels et les
+							locations saisonnières à Colmar et alentours.
+						</p>
+
+						<div class="actions">
+							<a href="#contact" class="btn primary">Demander un devis</a>
+							<a href="tel:+33780548663" class="btn secondary"
+								>07 80 54 86 63</a
+							>
+						</div>
+
+						<div class="trust-row">
+							<span class="trust-pill">Service fiable</span>
+							<span class="trust-pill">Devis rapide</span>
+							<span class="trust-pill">Équipe sérieuse</span>
+						</div>
+					</div>
+
+					<div class="hero-card">
+						<div class="hero-visual">
+							<div class="sparkle">✨</div>
+						</div>
+						<h3>Un intérieur propre et rassurant.</h3>
+						<p>
+							Nettoyage régulier, ponctuel ou approfondi : nous adaptons nos
+							prestations à vos besoins.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="container stats">
+					<div class="stat">
+						<strong>500+</strong>
+						<span>Clients</span>
+					</div>
+					<div class="stat">
+						<strong>99%</strong>
+						<span>Satisfaction</span>
+					</div>
+					<div class="stat">
+						<strong>10+</strong>
+						<span>Années</span>
+					</div>
+					<div class="stat">
+						<strong>24h</strong>
+						<span>Réponse</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="services">
+				<div class="container">
+					<div class="section-head">
+						<span class="eyebrow">Nos prestations</span>
+						<h2
+							style="
+								font-size: clamp(2rem, 4vw, 3rem);
+								color: var(--navy);
+								margin-bottom: 10px;
+							">
+							Des services adaptés à votre espace.
+						</h2>
+						<p style="color: var(--muted); font-size: 1.04rem">
+							Une solution claire et professionnelle pour chaque type de besoin.
+						</p>
+					</div>
+
+					<div class="services-grid">
+						<article class="card">
+							<div class="card-icon">🏠</div>
+							<h3>Particuliers</h3>
+							<p>
+								Entretien régulier ou ponctuel de votre maison, appartement et
+								intérieur.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card-icon">🏢</div>
+							<h3>Bureaux & commerces</h3>
+							<p>
+								Un espace propre et accueillant pour vos collaborateurs et vos
+								clients.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card-icon">🏡</div>
+							<h3>Airbnb & locations</h3>
+							<p>
+								Préparation impeccable entre deux séjours pour un accueil
+								parfait.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card-icon">✨</div>
+							<h3>Grand nettoyage</h3>
+							<p>
+								Nettoyage en profondeur pour des espaces fatigués et à remettre
+								en état.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card-icon">🧼</div>
+							<h3>Entretien régulier</h3>
+							<p>
+								Un planning adapté à votre rythme et à votre environnement
+								quotidien.
+							</p>
+						</article>
+
+						<article class="card">
+							<div class="card-icon">📍</div>
+							<h3>Colmar & alentours</h3>
+							<p>Une intervention fiable sur Colmar et les secteurs voisins.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="about-wrap section" id="apropos">
+				<div class="container about-grid">
+					<div class="about-copy">
+						<h2>
+							Une entreprise de nettoyage simple, sérieuse et professionnelle.
+						</h2>
+						<p>
+							Maison Impeccable accompagne les particuliers comme les
+							professionnels avec des prestations attentionnées, claires et
+							personnalisées.
+						</p>
+						<p>
+							Nous mettons un point d'honneur à la qualité du service, au
+							respect des lieux et à une communication transparente.
+						</p>
+
+						<div class="check-list">
+							<div class="check-item">Nettoyage régulier ou ponctuel</div>
+							<div class="check-item">Particuliers et professionnels</div>
+							<div class="check-item">Service discret et fiable</div>
+							<div class="check-item">Devis personnalisé</div>
+						</div>
+					</div>
+
+					<div class="about-panel">
+						<h3>Pourquoi nous choisir ?</h3>
+						<p>
+							Parce que la propreté influence votre confort et votre image. Nous
+							traitons chaque espace avec sérieux et précision.
+						</p>
+
+						<div class="mini-metrics">
+							<div class="metric">
+								<strong>100%</strong>
+								<span>Qualité</span>
+							</div>
+							<div class="metric">
+								<strong>24h</strong>
+								<span>Réponse</span>
+							</div>
+							<div class="metric">
+								<strong>+1</strong>
+								<span>Service</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="temoignages">
+				<div class="container">
+					<div class="section-head">
+						<span class="eyebrow">Avis Clients</span>
+						<h2
+							style="
+								font-size: clamp(2rem, 4vw, 3rem);
+								color: var(--navy);
+								margin-bottom: 10px;
+							">
+							Ce que nos clients disent de nous.
+						</h2>
+						<p style="color: var(--muted); font-size: 1.04rem">
+							Des témoignages authentiques de nos clients satisfaits.
+						</p>
+					</div>
+
+					<div class="testimonials-grid">
+						<div class="testimonial-card">
+							<div class="stars">★★★★★</div>
+							<p class="review">
+								"Excellent service ! L'équipe est très professionnelle et
+								attentive aux détails. Notre maison n'a jamais été aussi propre.
+								Je recommande vivement !"
+							</p>
+							<div class="testimonial-author">
+								<strong>Marie D.</strong>
+								<span>Colmar</span>
+							</div>
+						</div>
+
+						<div class="testimonial-card">
+							<div class="stars">★★★★★</div>
+							<p class="review">
+								"Nous utilisons Maison Impeccable pour notre bureau depuis 6
+								mois. Le service est fiable, discret et nos clients remarquent
+								la propreté. Top !"
+							</p>
+							<div class="testimonial-author">
+								<strong>Jean L.</strong>
+								<span>Bureau à Colmar</span>
+							</div>
+						</div>
+
+						<div class="testimonial-card">
+							<div class="stars">★★★★★</div>
+							<p class="review">
+								"Pour mes locations Airbnb, c'est parfait. Maison Impeccable
+								prépare chaque appartement impeccablement entre les séjours. Mes
+								hôtes sont toujours satisfaits."
+							</p>
+							<div class="testimonial-author">
+								<strong>Sophie M.</strong>
+								<span>Gestionnaire Airbnb</span>
+							</div>
+						</div>
+					</div>
+
+					<div
+						style="
+							margin-top: 60px;
+							border-top: 1px solid rgba(19, 43, 62, 0.1);
+							padding-top: 40px;
+						">
+						<h3
+							style="
+								color: var(--navy);
+								margin-bottom: 20px;
+								font-size: 1.5rem;
+								text-align: center;
+							">
+							Partagez votre expérience
+						</h3>
+						<p
+							style="
+								color: var(--muted);
+								text-align: center;
+								margin-bottom: 30px;
+							">
+							Votre avis nous aide à nous améliorer. N'hésitez pas à nous
+							laisser un commentaire !
+						</p>
+						<form
+							id="review-form"
+							style="
+								max-width: 600px;
+								margin: 0 auto;
+								display: grid;
+								grid-template-columns: 1fr 1fr;
+								gap: 18px;
+							">
+							<div style="display: flex; flex-direction: column; gap: 8px">
+								<label
+									for="review-name"
+									style="
+										color: var(--navy);
+										font-weight: 700;
+										font-size: 0.9rem;
+									">
+									Votre nom *
+								</label>
+								<input
+									type="text"
+									id="review-name"
+									required
+									placeholder="Votre nom"
+									style="
+										width: 100%;
+										padding: 12px 14px;
+										border: 1px solid rgba(19, 43, 62, 0.1);
+										border-radius: 8px;
+										background: white;
+										color: var(--navy);
+										font-size: 0.95rem;
+									" />
+							</div>
+
+							<div style="display: flex; flex-direction: column; gap: 8px">
+								<label
+									for="review-location"
+									style="
+										color: var(--navy);
+										font-weight: 700;
+										font-size: 0.9rem;
+									">
+									Ville / Organisation
+								</label>
+								<input
+									type="text"
+									id="review-location"
+									placeholder="Colmar, Bureau, etc."
+									style="
+										width: 100%;
+										padding: 12px 14px;
+										border: 1px solid rgba(19, 43, 62, 0.1);
+										border-radius: 8px;
+										background: white;
+										color: var(--navy);
+										font-size: 0.95rem;
+									" />
+							</div>
+
+							<div style="display: flex; flex-direction: column; gap: 8px">
+								<label
+									for="review-rating"
+									style="
+										color: var(--navy);
+										font-weight: 700;
+										font-size: 0.9rem;
+									">
+									Votre note *
+								</label>
+								<select
+									id="review-rating"
+									required
+									style="
+										width: 100%;
+										padding: 12px 14px;
+										border: 1px solid rgba(19, 43, 62, 0.1);
+										border-radius: 8px;
+										background-color: white;
+										color: var(--navy);
+										font-size: 0.95rem;
+									">
+									<option value="">Sélectionnez une note</option>
+									<option value="5">★★★★★ Excellent (5/5)</option>
+									<option value="4">★★★★☆ Très bon (4/5)</option>
+									<option value="3">★★★☆☆ Bon (3/5)</option>
+									<option value="2">★★☆☆☆ Satisfaisant (2/5)</option>
+									<option value="1">★☆☆☆☆ À améliorer (1/5)</option>
+								</select>
+							</div>
+
+							<div style="display: flex; flex-direction: column; gap: 8px">
+								<label
+									for="review-email"
+									style="
+										color: var(--navy);
+										font-weight: 700;
+										font-size: 0.9rem;
+									">
+									Votre email *
+								</label>
+								<input
+									type="email"
+									id="review-email"
+									required
+									placeholder="votre@email.com"
+									style="
+										width: 100%;
+										padding: 12px 14px;
+										border: 1px solid rgba(19, 43, 62, 0.1);
+										border-radius: 8px;
+										background: white;
+										color: var(--navy);
+										font-size: 0.95rem;
+									" />
+							</div>
+
+							<div
+								style="
+									display: flex;
+									flex-direction: column;
+									gap: 8px;
+									grid-column: 1 / -1;
+								">
+								<label
+									for="review-text"
+									style="
+										color: var(--navy);
+										font-weight: 700;
+										font-size: 0.9rem;
+									">
+									Votre avis *
+								</label>
+								<textarea
+									id="review-text"
+									required
+									placeholder="Parlez-nous de votre expérience avec Maison Impeccable..."
+									style="
+										width: 100%;
+										padding: 12px 14px;
+										border: 1px solid rgba(19, 43, 62, 0.1);
+										border-radius: 8px;
+										background: white;
+										color: var(--navy);
+										font-size: 0.95rem;
+										min-height: 120px;
+										font-family: inherit;
+									"></textarea>
+							</div>
+
+							<div style="grid-column: 1 / -1; display: flex; gap: 10px">
+								<button
+									type="submit"
+									style="
+										flex: 1;
+										padding: 14px 24px;
+										background: linear-gradient(135deg, #13a3ff, #0856d6);
+										color: white;
+										border: none;
+										border-radius: 8px;
+										font-weight: 700;
+										cursor: pointer;
+										transition: all 0.3s ease;
+									"
+									onmouseover="
+										this.style.transform = 'translateY(-2px)';
+										this.style.boxShadow = '0 8px 20px rgba(19, 86, 214, 0.3)';
+									"
+									onmouseout="
+										this.style.transform = 'translateY(0)';
+										this.style.boxShadow = 'none';
+									">
+									Publier mon avis
+								</button>
+								<span
+									id="review-status"
+									style="
+										flex: 1;
+										display: flex;
+										align-items: center;
+										color: var(--navy);
+										font-weight: 500;
+										text-align: center;
+									"></span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="process">
+				<div class="container">
+					<div class="section-head">
+						<span class="eyebrow">Comment ça marche</span>
+						<h2
+							style="
+								font-size: clamp(2rem, 4vw, 3rem);
+								color: var(--navy);
+								margin-bottom: 10px;
+							">
+							Un processus simple et transparent.
+						</h2>
+						<p style="color: var(--muted); font-size: 1.04rem">
+							La demande, le devis et le nettoyage, sans complication.
+						</p>
+					</div>
+
+					<div class="process-grid">
+						<div class="step">
+							<div class="number">1</div>
+							<h3>Contact</h3>
+							<p>
+								Vous nous expliquez votre besoin, le type d’espace et votre
+								calendrier.
+							</p>
+						</div>
+						<div class="step">
+							<div class="number">2</div>
+							<h3>Devis</h3>
+							<p>
+								Nous vous proposons un devis clair, honnête et adapté à votre
+								situation.
+							</p>
+						</div>
+						<div class="step">
+							<div class="number">3</div>
+							<h3>Nettoyage</h3>
+							<p>
+								Notre équipe intervient avec rigueur pour un rendu impeccable et
+								durable.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" id="contact">
+				<div class="container">
+					<div class="booking-wrap">
+						<div class="booking-grid">
+							<div class="booking-info">
+								<span class="eyebrow">Demandez votre devis</span>
+								<h3>Contactez-nous</h3>
+								<p>
+									Une demande rapide, des réponses claires et un service pensé
+									pour votre quotidien.
+								</p>
+
+								<div class="contact-list">
+									<div class="contact-line">
+										<span class="icon">☎</span>
+										<span><a href="tel:+33780548663">07 80 54 86 63</a></span>
+									</div>
+									<div class="contact-line">
+										<span class="icon">✉</span>
+										<span
+											><a href="mailto:mahsumim588@gmail.com"
+												>mahsumim588@gmail.com</a
+											></span
+										>
+									</div>
+									<div class="contact-line">
+										<span class="icon">📍</span>
+										<span>Colmar & alentours</span>
+									</div>
+								</div>
+
+								<ul class="booking-points">
+									<li>Devis personnalisé</li>
+									<li>Disponibilité flexible</li>
+									<li>Service sérieux et discret</li>
+								</ul>
+							</div>
+
+							<form class="booking-form" id="devisForm" method="post">
+								<div>
+									<label for="nom">Nom</label>
+									<input
+										id="nom"
+										name="Nom"
+										type="text"
+										placeholder="Votre nom"
+										required />
+								</div>
+
+								<div>
+									<label for="telephone">Téléphone</label>
+									<input
+										id="telephone"
+										name="Téléphone"
+										type="tel"
+										placeholder="Votre téléphone" />
+								</div>
+
+								<div>
+									<label for="email">Email</label>
+									<input
+										id="email"
+										name="Email"
+										type="email"
+										placeholder="Votre email" />
+								</div>
+
+								<div>
+									<label for="service">Service</label>
+									<select id="service" name="Service">
+										<option>Particulier</option>
+										<option>Bureau / commerce</option>
+										<option>Airbnb / location</option>
+										<option>Nettoyage régulier</option>
+										<option>Grand nettoyage</option>
+									</select>
+								</div>
+
+								<div class="full">
+									<label for="message">Votre besoin</label>
+									<textarea
+										id="message"
+										name="Message"
+										placeholder="Décrivez votre besoin..."></textarea>
+								</div>
+
+								<div class="full">
+									<div
+										id="formMessage"
+										aria-live="polite"
+										style="
+											display: none;
+											margin-bottom: 10px;
+											padding: 12px 14px;
+											border-radius: 10px;
+											font-weight: 700;
+										"></div>
+									<button type="submit" class="btn">Envoyer ma demande</button>
+								</div>
+
+								<div
+									id="payloadDebug"
+									style="
+										display: none;
+										margin-top: 10px;
+										padding: 10px 12px;
+										background: #f3f8ff;
+										border: 1px solid #dfeafc;
+										border-radius: 8px;
+										color: #17395b;
+										font-size: 0.8rem;
+										white-space: pre-wrap;
+										word-break: break-word;
+									"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container footer-inner">
+				<div class="footer-brand">
+					<span
+						class="logo-mark"
+						style="width: 36px; height: 36px; font-size: 0.7rem"
+						>MI</span
+					>
+					<span>Maison Impeccable</span>
+				</div>
+
+				<nav class="footer-nav" aria-label="Navigation footer">
+					<a href="#services">Services</a>
+					<a href="#apropos">À propos</a>
+					<a href="#process">Process</a>
+					<a href="#contact">Contact</a>
+					<button id="admin-toggle" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 0.8rem; opacity: 0.6; padding: 0;">Admin</button>
+				</nav>
+
+				<div
+					style="
+						font-size: 0.85rem;
+						color: rgba(255, 255, 255, 0.6);
+						margin-top: 10px;
+						width: 100%;
+						text-align: center;
+						border-top: 1px solid rgba(255, 255, 255, 0.1);
+						padding-top: 15px;
+					">
+					© 2026 Maison Impeccable. Tous droits réservés.
+				</div>
+			</div>
+		</footer>
+
+		<div id="admin-panel" style="display: none; position: fixed; bottom: 20px; right: 20px; background: white; border: 2px solid #132b3e; border-radius: 12px; padding: 20px; max-width: 300px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); z-index: 1000;">
+			<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+				<strong style="color: #132b3e;">Admin Panel</strong>
+				<button id="admin-close" style="background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #607184;">✕</button>
+			</div>
+			<div id="admin-reviews-list" style="max-height: 400px; overflow-y: auto; border-top: 1px solid #dfe9f3; padding-top: 10px;"></div>
+		</div>
+
+		<script>
+			// API base for local testing. Keep this aligned with the Flask port configured in .env.
+			const API_BASE = "http://127.0.0.1:8000";
+			const toggle = document.querySelector(".mobile-toggle");
+			const nav = document.getElementById("mainNav");
+
+			const defaultReviews = [
+				{
+					nom: "Marie D.",
+					location: "Colmar",
+					rating: 5,
+					review:
+						"Excellent service ! L'équipe est très professionnelle et attentive aux détails. Notre maison n'a jamais été aussi propre. Je recommande vivement !",
+				},
+				{
+					nom: "Jean L.",
+					location: "Bureau à Colmar",
+					rating: 5,
+					review:
+						"Nous utilisons Maison Impeccable pour notre bureau depuis 6 mois. Le service est fiable, discret et nos clients remarquent la propreté. Top !",
+				},
+				{
+					nom: "Sophie M.",
+					location: "Gestionnaire Airbnb",
+					rating: 5,
+					review:
+						"Pour mes locations Airbnb, c'est parfait. Maison Impeccable prépare chaque appartement impeccablement entre les séjours. Mes hôtes sont toujours satisfaits.",
+				},
+			];
+
+			function makeStars(rating) {
+				return (
+					"★".repeat(Math.max(1, Number(rating) || 0)) +
+					"☆".repeat(Math.max(0, 5 - (Number(rating) || 0)))
+				);
+			}
+
+			function renderTestimonials(reviews, isAdmin = false) {
+				const grid = document.querySelector(".testimonials-grid");
+				if (!grid) return;
+
+				const safeReviews =
+					Array.isArray(reviews) && reviews.length ? reviews : defaultReviews;
+				grid.innerHTML = "";
+
+				safeReviews.forEach((review, index) => {
+					const card = document.createElement("div");
+					card.className = "testimonial-card";
+					card.setAttribute("data-review-id", review.id || index);
+
+					const stars = document.createElement("div");
+					stars.className = "stars";
+					stars.textContent = makeStars(review.rating || 5);
+
+					const body = document.createElement("p");
+					body.className = "review";
+					body.textContent = `"${review.review || review.text || "Très satisfait du service."}"`;
+
+					const author = document.createElement("div");
+					author.className = "testimonial-author";
+
+					const strong = document.createElement("strong");
+					strong.textContent = review.nom || review.name || "Client";
+
+					const place = document.createElement("span");
+					place.textContent = review.location || "Client satisfait";
+
+					author.appendChild(strong);
+					author.appendChild(place);
+
+					card.appendChild(stars);
+					card.appendChild(body);
+					card.appendChild(author);
+
+					// Add delete button if review has an ID (from API)
+					if (review.id && isAdmin) {
+						const deleteBtn = document.createElement("button");
+						deleteBtn.textContent = "✕ Supprimer";
+						deleteBtn.style.cssText = "margin-top: 10px; width: 100%; padding: 8px; background: #ff6b6b; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 700;";
+						deleteBtn.addEventListener("click", () => deleteReview(review.id));
+						card.appendChild(deleteBtn);
+					}
+
+					grid.appendChild(card);
+				});
+			}
+
+			let allReviews = [];
+			let adminMode = false;
+
+			async function deleteReview(reviewId) {
+				if (!confirm("Êtes-vous sûr de vouloir supprimer cet avis ?")) return;
+
+				try {
+					const response = await fetch(`${API_BASE}/api/reviews/${reviewId}`, {
+						method: "DELETE",
+						headers: { "Content-Type": "application/json" },
+					});
+
+					if (!response.ok) {
+						throw new Error("Impossible de supprimer l'avis.");
+					}
+
+					allReviews = allReviews.filter((r) => r.id !== reviewId);
+					renderTestimonials(allReviews, adminMode);
+					renderAdminList();
+				} catch (error) {
+					alert("Erreur: " + (error.message || "La suppression a échoué."));
+				}
+			}
+
+			function renderAdminList() {
+				const adminList = document.getElementById("admin-reviews-list");
+				if (!adminList) return;
+
+				adminList.innerHTML = "";
+				const savedReviews = allReviews.filter((r) => r.id);
+
+				if (!savedReviews.length) {
+					adminList.innerHTML = "<p style='color: #607184; font-size: 0.9rem;'>Aucun avis client.</p>";
+					return;
+				}
+
+				savedReviews.forEach((review) => {
+					const item = document.createElement("div");
+					item.style.cssText = "padding: 10px; border-bottom: 1px solid #eef3f9; display: flex; justify-content: space-between; align-items: start; gap: 10px;";
+
+					const info = document.createElement("div");
+					info.style.cssText = "flex: 1; font-size: 0.85rem;";
+					info.innerHTML = `
+						<strong style="color: #132b3e; display: block;">${review.nom}</strong>
+						<span style="color: #607184;">${"★".repeat(review.rating)}</span>
+						<p style="color: #607184; margin: 5px 0 0 0; font-size: 0.8rem;">${review.review.substring(0, 50)}...</p>
+					`;
+
+					const deleteBtn = document.createElement("button");
+					deleteBtn.textContent = "✕";
+					deleteBtn.style.cssText = "background: #ff6b6b; color: white; border: none; border-radius: 4px; width: 28px; height: 28px; cursor: pointer; font-weight: 700;";
+					deleteBtn.addEventListener("click", () => deleteReview(review.id));
+
+					item.appendChild(info);
+					item.appendChild(deleteBtn);
+					adminList.appendChild(item);
+				});
+			}
+
+			const adminToggle = document.getElementById("admin-toggle");
+			const adminPanel = document.getElementById("admin-panel");
+			const adminClose = document.getElementById("admin-close");
+
+			if (adminToggle && adminPanel) {
+				adminToggle.addEventListener("click", () => {
+					adminMode = !adminMode;
+					adminPanel.style.display = adminMode ? "block" : "none";
+					renderTestimonials(allReviews, adminMode);
+					renderAdminList();
+				});
+
+				adminClose.addEventListener("click", () => {
+					adminMode = false;
+					adminPanel.style.display = "none";
+					renderTestimonials(allReviews, adminMode);
+				});
+			}
+
+			async function loadReviews() {
+				try {
+					const response = await fetch(`${API_BASE}/api/reviews`);
+					allReviews = [...defaultReviews];
+
+					if (response.ok) {
+						const data = await response.json();
+						const savedReviews = Array.isArray(data.reviews) ? data.reviews : [];
+						savedReviews.forEach((item) => {
+							allReviews.push({
+								id: item.id,
+								nom: item.nom || item.name || "Client",
+								location: item.location || "Client satisfait",
+								rating: Number(item.rating) || 5,
+								review: item.review || item.text || "Très satisfait du service.",
+							});
+						});
+					}
+
+					renderTestimonials(allReviews, adminMode);
+				} catch (error) {
+					allReviews = [...defaultReviews];
+					renderTestimonials(allReviews, adminMode);
+				}
+			}
+
+			if (toggle && nav) {
+				toggle.addEventListener("click", () => {
+					nav.classList.toggle("open");
+				});
+
+				nav.querySelectorAll("a").forEach((link) => {
+					link.addEventListener("click", () => nav.classList.remove("open"));
+				});
+			}
+
+			const devisForm = document.getElementById("devisForm");
+			const formMessage = document.getElementById("formMessage");
+			const payloadDebug = document.getElementById("payloadDebug");
+
+			if (devisForm) {
+				devisForm.addEventListener("input", () => {
+					const payload = {
+						nom: document.getElementById("nom").value.trim(),
+						telephone: document.getElementById("telephone").value.trim(),
+						email: document.getElementById("email").value.trim(),
+						service: document.getElementById("service").value,
+						message: document.getElementById("message").value.trim(),
+					};
+
+					payloadDebug.style.display = "block";
+					payloadDebug.textContent = JSON.stringify(payload, null, 2);
+				});
+
+				devisForm.addEventListener("submit", async (event) => {
+					event.preventDefault();
+
+					const payload = {
+						nom: document.getElementById("nom").value.trim(),
+						telephone: document.getElementById("telephone").value.trim(),
+						email: document.getElementById("email").value.trim(),
+						service: document.getElementById("service").value,
+						message: document.getElementById("message").value.trim(),
+					};
+
+					payloadDebug.style.display = "block";
+					payloadDebug.textContent = JSON.stringify(payload, null, 2);
+
+					formMessage.style.display = "block";
+					formMessage.style.background = "#eaf4ff";
+					formMessage.style.color = "#132b3e";
+					formMessage.textContent = "Envoi de votre demande...";
+
+					try {
+						const response = await fetch(`${API_BASE}/api/devis`, {
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify(payload),
+						});
+
+						let result = {};
+						const contentType = response.headers.get("content-type") || "";
+						if (contentType.includes("application/json")) {
+							try {
+								result = await response.json();
+							} catch (err) {
+								result = {};
+							}
+						} else {
+							const text = await response.text();
+							if (text) result = { message: text };
+						}
+
+						if (!response.ok) {
+							const serverMessage =
+								result && (result.error || result.message || result.detail);
+							throw new Error(
+								serverMessage ||
+									response.statusText ||
+									"Une erreur est survenue.",
+							);
+						}
+
+						formMessage.style.background = "#eafaf1";
+						formMessage.style.color = "#124b2b";
+						formMessage.textContent =
+							"Votre demande a bien été envoyée. Nous vous recontacterons rapidement.";
+						devisForm.reset();
+						payloadDebug.textContent = "";
+						payloadDebug.style.display = "none";
+					} catch (error) {
+						formMessage.style.background = "#fff1f1";
+						formMessage.style.color = "#7a1d1d";
+						formMessage.textContent =
+							error.message ||
+							"Impossible d’envoyer la demande pour le moment.";
+					}
+				});
+			}
+
+			const reviewForm = document.getElementById("review-form");
+			const reviewStatus = document.getElementById("review-status");
+
+			if (reviewForm) {
+				reviewForm.addEventListener("submit", async (event) => {
+					event.preventDefault();
+
+					const payload = {
+						nom: document.getElementById("review-name").value.trim(),
+						location: document.getElementById("review-location").value.trim(),
+						rating: Number(document.getElementById("review-rating").value),
+						email: document.getElementById("review-email").value.trim(),
+						review: document.getElementById("review-text").value.trim(),
+					};
+
+					if (
+						!payload.nom ||
+						!payload.email ||
+						!payload.rating ||
+						!payload.review
+					) {
+						if (reviewStatus) {
+							reviewStatus.textContent =
+								"Veuillez remplir tous les champs obligatoires.";
+							reviewStatus.style.color = "#7a1d1d";
+						}
+						return;
+					}
+
+					if (reviewStatus) {
+						reviewStatus.textContent = "Publication de votre avis...";
+						reviewStatus.style.color = "#132b3e";
+					}
+
+					try {
+						const response = await fetch(`${API_BASE}/api/review`, {
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify(payload),
+						});
+
+						const result = await response.json().catch(() => ({}));
+
+						if (!response.ok) {
+							throw new Error(
+								result.error || "Erreur lors de l'envoi du témoignage.",
+							);
+						}
+
+						// Add the new review with its ID from the server
+						const newReview = {
+							id: result.review?.id || Date.now(),
+							nom: payload.nom,
+							location: payload.location || "Client satisfait",
+							rating: payload.rating,
+							review: payload.review,
+						};
+
+						allReviews.push(newReview);
+						renderTestimonials(allReviews, adminMode);
+						renderAdminList();
+
+						reviewForm.reset();
+						if (reviewStatus) {
+							reviewStatus.textContent = "Votre avis a bien été ajouté !";
+							reviewStatus.style.color = "#124b2b";
+						}
+					} catch (error) {
+						if (reviewStatus) {
+							reviewStatus.textContent =
+								error.message || "Impossible d'ajouter votre avis.";
+							reviewStatus.style.color = "#7a1d1d";
+						}
+					}
+				});
+			}
+
+			loadReviews();
+		</script>
+	</body>
+</html>

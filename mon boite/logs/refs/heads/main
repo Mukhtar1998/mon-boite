@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 18d4f5aa46497756cbfb16eed3690b3435b8ebdf Mukhtar1998 <94168491+Mukhtar1998@users.noreply.github.com> 1790701267 +0200	commit (initial): first comment
+18d4f5aa46497756cbfb16eed3690b3435b8ebdf 18d4f5aa46497756cbfb16eed3690b3435b8ebdf Mukhtar1998 <94168491+Mukhtar1998@users.noreply.github.com> 1790701693 +0200	Branch: renamed refs/heads/master to refs/heads/main
+18d4f5aa46497756cbfb16eed3690b3435b8ebdf 7452eb26822a7df165edfd612c27ddf9ef4e48e0 Mukhtar1998 <94168491+Mukhtar1998@users.noreply.github.com> 1790701693 +0200	commit: Initial website and email form
+7452eb26822a7df165edfd612c27ddf9ef4e48e0 1257914d7d0840fdcb4bc838da6b301678856ef1 Mukhtar1998 <94168491+Mukhtar1998@users.noreply.github.com> 1790792661 +0200	commit: adding the review
+1257914d7d0840fdcb4bc838da6b301678856ef1 5e69f24d607b99c698ddf0f1588b1c1d6d33b30b Mukhtar1998 <94168491+Mukhtar1998@users.noreply.github.com> 1790937191 +0200	commit: finighing the review part
+5e69f24d607b99c698ddf0f1588b1c1d6d33b30b 3123acb5ebe5593841ce5b71675cb2db796228f0 Mukhtar1998 <94168491+Mukhtar1998@users.noreply.github.com> 1790942850 +0200	commit: added admin panel where i can delete a review
